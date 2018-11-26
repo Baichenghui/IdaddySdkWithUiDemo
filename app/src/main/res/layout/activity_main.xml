@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/prd_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/main_story_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:text="进入首页"
+            app:layout_constraintTop_toBottomOf="@+id/prd_textView" />
+
+        <Button
+            android:id="@+id/main_user_logout_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:text="退出登录"
+            app:layout_constraintTop_toBottomOf="@+id/main_story_button" />
+
+        <Button
+            android:id="@+id/getOrderlistBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:text="获取订单列表"
+            app:layout_constraintTop_toBottomOf="@+id/main_user_logout_button" />
+
+        <Button
+            android:id="@+id/getAudioRanklistBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:text="获取音频排行"
+            app:layout_constraintTop_toBottomOf="@+id/getOrderlistBtn" />
+
+        <Button
+            android:id="@+id/use_sdk_pay_btn"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/black"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="选择用户直接支付给工爸"
+            app:layout_constraintTop_toBottomOf="@+id/getAudioRanklistBtn"/>
+
+        <CheckBox
+            android:id="@+id/use_sdk_pay_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintBottom_toBottomOf="@+id/use_sdk_pay_btn"
+            app:layout_constraintLeft_toRightOf="@+id/use_sdk_pay_btn"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/use_sdk_pay_btn"/>
+
+        <Button
+            android:id="@+id/push_to_device"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/black"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="推送按钮开关"
+            app:layout_constraintTop_toBottomOf="@+id/use_sdk_pay_btn"/>
+
+        <CheckBox
+            android:id="@+id/push_to_device_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintBottom_toBottomOf="@+id/push_to_device"
+            app:layout_constraintLeft_toRightOf="@+id/push_to_device"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/push_to_device"/>
+
+
+        <EditText
+            android:id="@+id/push_to_device_text"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="推送按钮的文字：默认推送"
+            android:gravity="center"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintBottom_toBottomOf="@+id/push_to_device_btn"
+            app:layout_constraintTop_toTopOf="@+id/push_to_device_btn"
+            app:layout_constraintRight_toLeftOf="@+id/push_to_device_btn"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <Button
+            android:id="@+id/push_to_device_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/push_btn_background_selector"
+            android:enabled="false"
+            android:text="确定"
+            app:layout_constraintTop_toBottomOf="@+id/push_to_device"
+            app:layout_constraintLeft_toRightOf="@+id/push_to_device_text"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <Button
+            android:id="@+id/useIdaddyValidate"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/black"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="工爸账户验证模式"
+            app:layout_constraintTop_toBottomOf="@+id/push_to_device_text"/>
+
+        <CheckBox
+            android:id="@+id/useIdaddyAccountValidate_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintBottom_toBottomOf="@+id/useIdaddyValidate"
+            app:layout_constraintLeft_toRightOf="@+id/useIdaddyValidate"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/useIdaddyValidate"/>
+
+
+        <EditText
+            android:id="@+id/edit_phoneNumber"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入手机号"
+            android:gravity="center"
+            android:inputType="phone"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_phoneNumber_btn"
+            app:layout_constraintTop_toTopOf="@+id/edit_phoneNumber_btn"
+            app:layout_constraintRight_toLeftOf="@+id/edit_phoneNumber_btn"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <Button
+            android:id="@+id/edit_phoneNumber_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/push_btn_background_selector"
+            android:enabled="false"
+            android:text="确定"
+            app:layout_constraintTop_toBottomOf="@+id/useIdaddyValidate"
+            app:layout_constraintLeft_toRightOf="@+id/edit_phoneNumber"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <Button
+            android:id="@+id/main_story_detail_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:text="进入故事详情页"
+            app:layout_constraintTop_toBottomOf="@+id/edit_phoneNumber_btn" />
+
+        <EditText
+            android:id="@+id/editText_uniqueid"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:hint="请输入故事id进行测试"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintBottom_toBottomOf="@+id/main_story_detail_button"
+            app:layout_constraintLeft_toRightOf="@+id/main_story_detail_button"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/main_story_detail_button" />
+
+
+        <Button
+            android:id="@+id/uniquedId_btn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:text="切换uniqueID"
+            app:layout_constraintTop_toBottomOf="@+id/main_story_detail_button" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入uniqueid"
+            app:layout_constraintBottom_toBottomOf="@+id/uniquedId_btn"
+            app:layout_constraintLeft_toRightOf="@+id/uniquedId_btn"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/uniquedId_btn" />
+
+        <Button
+            android:id="@+id/getPayParam_btn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:text="获取支付参数"
+            app:layout_constraintTop_toBottomOf="@+id/uniquedId_btn" />
+
+        <EditText
+            android:id="@+id/editText_goodsId"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="请输入商品id"
+            app:layout_constraintBottom_toBottomOf="@+id/getPayParam_btn"
+            app:layout_constraintLeft_toRightOf="@+id/getPayParam_btn"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/getPayParam_btn" />
+
+
+        <Button
+            android:id="@+id/getTopicList_btn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:text="专题作品"
+            app:layout_constraintTop_toBottomOf="@+id/getPayParam_btn" />
+
+        <EditText
+            android:id="@+id/editText_topicId"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="专题id(测试默认：542)"
+            app:layout_constraintBottom_toBottomOf="@+id/getTopicList_btn"
+            app:layout_constraintLeft_toRightOf="@+id/getTopicList_btn"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/getTopicList_btn" />
+
+
+        <Button
+            android:id="@+id/getAudioInfo_btn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:text="获取音频信息"
+            app:layout_constraintTop_toBottomOf="@+id/getTopicList_btn" />
+
+        <EditText
+            android:id="@+id/editText_audioId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="音频id(测试默认3807)"
+            app:layout_constraintBottom_toBottomOf="@+id/getAudioInfo_btn"
+            app:layout_constraintLeft_toRightOf="@+id/getAudioInfo_btn"
+            app:layout_constraintRight_toLeftOf="@+id/editText_chapterId"
+            app:layout_constraintTop_toTopOf="@+id/getAudioInfo_btn" />
+
+
+        <EditText
+            android:id="@+id/editText_chapterId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="章节id(默认空)"
+            app:layout_constraintBottom_toBottomOf="@+id/getAudioInfo_btn"
+            app:layout_constraintLeft_toRightOf="@+id/editText_audioId"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/getAudioInfo_btn" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>
