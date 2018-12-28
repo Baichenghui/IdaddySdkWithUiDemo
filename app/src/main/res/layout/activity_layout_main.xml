@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:text="口袋故事" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/enter_main_page"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="left|center"
+            android:text="进入首页"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/change_env_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/change_env_title"
+                android:layout_width="wrap_content"
+                android:layout_height="41dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="left|center"
+                android:text="环境信息："
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/current_env"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:gravity="left|center"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toRightOf="@+id/change_env_title"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text="dev" />
+
+            <ImageView
+                android:id="@+id/change_env_arrow"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_arrow_down"
+                app:layout_constraintBottom_toBottomOf="@+id/change_env_title"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/change_env_title" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/change_env_title" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/change_env_detail_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/accountInfo">
+
+            <TextView
+                android:id="@+id/change_env"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="left|center"
+                android:text="切换环境"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"  />
+
+            <View
+                android:id="@+id/change_env_detail_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/change_env" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/accountinfo_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/accountInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="41dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="left|center"
+                android:text="账号信息："
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/user_id"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:gravity="left|center"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toRightOf="@+id/accountInfo"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text="账号信息" />
+
+            <ImageView
+                android:id="@+id/accountInfo_arrow"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_arrow_down"
+                app:layout_constraintBottom_toBottomOf="@+id/accountInfo"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/accountInfo" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/accountInfo" />
+        </android.support.constraint.ConstraintLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/accountInfo_detail_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/accountInfo">
+
+            <TextView
+                android:id="@+id/is_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="left|center"
+                android:text="是否开通VIP"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/is_vip_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:gravity="left|center"
+                android:text="未开通"
+                android:textColor="@color/text_black"
+                android:textSize="13sp"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/is_vip" />
+
+            <TextView
+                android:id="@+id/change_account"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="left|center"
+                android:text="预设手机号:"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/is_vip"/>
+            
+            <EditText
+                android:id="@+id/phone_edittext"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:hint="请输入手机号"
+                android:textColor="@color/text_black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/change_account"
+                app:layout_constraintLeft_toRightOf="@+id/change_account"
+                app:layout_constraintTop_toTopOf="@+id/change_account" />
+
+            <TextView
+                android:id="@+id/change_account_btn"
+                style="@style/Btn_Style"
+                android:layout_height="32dp"
+                android:text="登录"
+                app:layout_constraintBottom_toBottomOf="@+id/change_account"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/change_account" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/change_account" />
+
+            <TextView
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="left|center"
+                android:text="退出登录"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/change_account" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/logout" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/audiodetailInfo_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/audiodetailInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="left|center"
+                android:text="故事详情页配置"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <ImageView
+                android:id="@+id/audiodetail_arrow"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_arrow_down"
+                app:layout_constraintBottom_toBottomOf="@+id/audiodetailInfo"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/audiodetailInfo" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/audiodetailInfo" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/audioDetail_info_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/accountInfo">
+
+            <EditText
+                android:id="@+id/audio_id"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="left|center"
+                android:hint="请输入故事ID（默认：9254）"
+                android:inputType="number"
+                android:textColor="@color/text_black"
+                android:textSize="12sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/enter_audioDetail_btn"
+                style="@style/Btn_Style"
+                android:text="进入详情页"
+                app:layout_constraintBottom_toBottomOf="@+id/audio_id"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/audio_id" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/audio_id" />
+
+            <TextView
+                android:id="@+id/show_push"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="left|center"
+                android:text="显示推送按钮"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/audio_id" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/show_push_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/show_push"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/show_push" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/show_push" />
+
+            <TextView
+                android:id="@+id/show_push_text"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="left|center"
+                android:text="推送按钮文案："
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/show_push" />
+
+            <EditText
+                android:id="@+id/show_push_edittext"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:hint="4个字以内，默认“推送”"
+                android:textColor="@color/text_black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/show_push_text"
+                app:layout_constraintLeft_toRightOf="@+id/show_push_text"
+                app:layout_constraintTop_toTopOf="@+id/show_push_text" />
+
+            <TextView
+                android:id="@+id/show_push_save_btn"
+                style="@style/Btn_Style"
+                android:text="保存"
+                app:layout_constraintBottom_toBottomOf="@+id/show_push_text"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/show_push_text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/show_push_text" />
+
+
+            <TextView
+                android:id="@+id/show_play_text"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="left|center"
+                android:text="播放按钮文案："
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/show_push_text" />
+
+            <EditText
+                android:id="@+id/show_play_edittext"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:hint="4个字以内，默认“播放”"
+                android:textColor="@color/text_black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/show_play_text"
+                app:layout_constraintLeft_toRightOf="@+id/show_play_text"
+                app:layout_constraintTop_toTopOf="@+id/show_play_text" />
+
+            <TextView
+                android:id="@+id/show_play_save_btn"
+                style="@style/Btn_Style"
+                android:text="保存"
+                app:layout_constraintBottom_toBottomOf="@+id/show_play_text"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/show_play_text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/show_play_text" />
+
+
+            <EditText
+                android:id="@+id/audio_info_id"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="left|center"
+                android:hint="音频ID（默认：9254）"
+                android:inputType="number"
+                android:textColor="@color/text_black"
+                android:textSize="12sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/show_play_text"/>
+
+            <EditText
+                android:id="@+id/audio_info_chapter_id"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:hint="章节ID（默认为空）"
+                android:inputType="number"
+                android:textColor="@color/text_black"
+                android:textSize="12sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toRightOf="@+id/audio_info_id"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/show_play_text"/>
+
+            <TextView
+                android:id="@+id/audio_info_btn"
+                style="@style/Btn_Style"
+                android:layout_width="wrap_content"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:text="获取音频信息"
+                app:layout_constraintBottom_toBottomOf="@+id/audio_info_id"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/audio_info_id" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/audio_info_chapter_id" />
+
+            <TextView
+                android:id="@+id/show_audio_detail_push"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="left|center"
+                android:text="点击声音列表推送到设备"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/audio_info_chapter_id" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/show_audio_detail_push_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/show_audio_detail_push"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/show_audio_detail_push" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/show_audio_detail_push" />
+
+            <TextView
+                android:id="@+id/show_audio_detail_play_or_push"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="left|center"
+                android:text="显示声音列表推送按钮"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/show_audio_detail_push" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/show_audio_detail_play_or_push_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/show_audio_detail_play_or_push"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/show_audio_detail_play_or_push" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/show_audio_detail_play_or_push" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/payandorder_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/payandorder"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="left|center"
+                android:text="订单/支付"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <ImageView
+                android:id="@+id/payandorder_arrow"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_arrow_down"
+                app:layout_constraintBottom_toBottomOf="@+id/payandorder"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/payandorder" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/payandorder" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/payandorder_info_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/accountInfo">
+
+            <TextView
+                android:id="@+id/payandorder_info_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="left|center"
+                android:text="使用工爸支付"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/payandorder_info_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/payandorder_info_tv"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/payandorder_info_tv" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/payandorder_info_tv" />
+
+
+            <TextView
+                android:id="@+id/getOrderlist"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="left|center"
+                android:text="当前用户的订单列表"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/payandorder_info_tv" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/getOrderlist" />
+
+            <TextView
+                android:id="@+id/generateOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="left|center"
+                android:text="生成商品订单："
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/getOrderlist" />
+
+            <EditText
+                android:id="@+id/orderid_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:hint="请输入商品ID(默认：2938)"
+                android:inputType="number"
+                android:textColor="@color/text_black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/generateOrder"
+                app:layout_constraintLeft_toRightOf="@+id/generateOrder"
+                app:layout_constraintTop_toTopOf="@+id/generateOrder" />
+
+            <TextView
+                android:id="@+id/generateOrder_btn"
+                style="@style/Btn_Style"
+                android:text="生成订单"
+                app:layout_constraintBottom_toBottomOf="@+id/generateOrder"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/generateOrder" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/generateOrder" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/extra_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/extra_text"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="left|center"
+                android:text="拓展功能"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <ImageView
+                android:id="@+id/extra_arrow"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_arrow_down"
+                app:layout_constraintBottom_toBottomOf="@+id/extra_text"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/extra_text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/extra_text" />
+        </android.support.constraint.ConstraintLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/extra_info_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/accountInfo">
+
+            <TextView
+                android:id="@+id/extra_showPlayfloat_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="left|center"
+                android:text="显示播放控制器悬浮窗入口"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/play_float_window_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/extra_showPlayfloat_tv"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/extra_showPlayfloat_tv" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/extra_showPlayfloat_tv" />
+
+            <TextView
+                android:id="@+id/getAudiolists"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="left|center"
+                android:text="获取各种排行榜单"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/extra_showPlayfloat_tv" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/getAudiolists" />
+
+
+            <TextView
+                android:id="@+id/auth_create_text"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="left|center"
+                android:text="兑换兑换码："
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/getAudiolists" />
+
+            <EditText
+                android:id="@+id/auth_create_edittext"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="left|center"
+                android:hint="请输入兑换码"
+                android:text="1721488406649604"
+                android:inputType="number"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/auth_create_text"
+                app:layout_constraintLeft_toRightOf="@+id/auth_create_text"
+                app:layout_constraintTop_toTopOf="@+id/auth_create_text" />
+
+            <TextView
+                android:id="@+id/auth_create_btn"
+                style="@style/Btn_Style"
+                android:text="兑换"
+                app:layout_constraintBottom_toBottomOf="@+id/auth_create_text"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/auth_create_text" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/auth_create_text" />
+
+            <TextView
+                android:id="@+id/get_topic_text"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="left|center"
+                android:text="获取专题列表："
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/auth_create_text" />
+
+            <EditText
+                android:id="@+id/get_topic_edittext"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:hint="请输入专题ID"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/get_topic_text"
+                app:layout_constraintLeft_toRightOf="@+id/get_topic_text"
+                app:layout_constraintTop_toTopOf="@+id/get_topic_text" />
+
+            <TextView
+                android:id="@+id/get_topic_btn"
+                style="@style/Btn_Style"
+                android:text="获取"
+                app:layout_constraintBottom_toBottomOf="@+id/get_topic_text"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/get_topic_text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/get_topic_text" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

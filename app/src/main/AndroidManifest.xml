@@ -19,7 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".NewMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -34,6 +34,7 @@
         <activity android:name=".activitys.OrderPayParamActivity"/>
         <activity android:name=".activitys.TopicAudioListActivity"/>
         <activity android:name=".activitys.AudioInfoActivity"/>
+        <activity android:name=".AuthCreateActivity"/>
 
         <!--填写申请到的appid 和 app key-->
         <!--<meta-data android:name="IDADDY_APP_ID" android:value="XXXXXX" />-->

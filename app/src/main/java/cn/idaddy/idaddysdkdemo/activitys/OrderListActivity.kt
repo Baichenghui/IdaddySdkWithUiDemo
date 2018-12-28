@@ -25,7 +25,7 @@ class OrderListActivity : AppCompatActivity(){
         orderLIstAdapter = OrderLIstAdapter(layoutInflater)
         order_list.adapter = orderLIstAdapter
 
-        IdaddySdk.getOrderList(10,object : OnGetOrderListCallback {
+        IdaddySdk.getOrderList(10,"vip", object : OnGetOrderListCallback {
             override fun onGetOrderSuccess(successRet: String?) {
                 val orderlist =  Gson().fromJson(successRet, OrderListBean::class.java)
                 for (orderbean in orderlist.list?.let { it}
